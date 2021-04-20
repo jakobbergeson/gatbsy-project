@@ -1,7 +1,7 @@
 import React from "react"
-import Layout from ".//components/Layout"
+import Layout from "../components/layout"
 
-export default function NotFound() {
+const NotFound = () => {
   return (
     <Layout>
       <h1>404</h1>
@@ -9,3 +9,4 @@ export default function NotFound() {
     </Layout>
   )
 }
+export default NotFound
