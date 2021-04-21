@@ -23,15 +23,15 @@ const Blog = () => {
       <h1>Blog</h1>
       <p>Posts will show up here</p>
       <ol>
-        <li>
-          <h1>{data.allMarkdownRemark.edges[0].node.frontmatter.title}</h1>
-          <h2>{data.allMarkdownRemark.edges[0].node.frontmatter.date}</h2>
-        </li>
-        <br></br>
-        <li>
-          <h1>{data.allMarkdownRemark.edges[1].node.frontmatter.title}</h1>
-          <h2>{data.allMarkdownRemark.edges[1].node.frontmatter.date}</h2>
-        </li>
+        {data.allMarkdownRemark.edges.map(edge => {
+          return (
+            <li>
+              <h1>{edge.node.frontmatter.title}</h1>
+              <h2>{edge.node.frontmatter.date}</h2>
+              <br></br>
+            </li>
+          )
+        })}
       </ol>
     </Layout>
   )
