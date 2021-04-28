@@ -5,6 +5,8 @@ date: "2021-20-04"
 
 This is my blog post about Gatsby.js.
 
+![city roundabout](./city.jpeg)
+
 ## Things to include
 
 1. React.js
