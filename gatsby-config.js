@@ -25,11 +25,11 @@ module.exports = {
             },
           },
           "gatsby-remark-relative-images",
+          "gatsby-plugin-image",
           {
             resolve: "gatsby-remark-images",
             options: {
               maxWidth: 750,
-              linkImageToOriginal: false,
             },
           },
         ],
