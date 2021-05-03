@@ -1,10 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
+import HeadTag from "../components/head"
 
 const About = () => {
   return (
     <Layout>
+      <HeadTag title="About Me" />
       <h1>About Me</h1>
       <p>This Is my Bio talking about Me, Mself, and I</p>
       <p>

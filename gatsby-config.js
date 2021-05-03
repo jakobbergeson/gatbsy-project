@@ -4,6 +4,7 @@ module.exports = {
     author: "Jakob Bergeson",
   },
   plugins: [
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
     {
       resolve: "gatsby-source-filesystem",

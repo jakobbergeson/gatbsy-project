@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import * as blogStyles from "./blog.module.scss"
+import HeadTag from "../components/head"
 
 const Blog = () => {
   const data = useStaticQuery(graphql`
@@ -20,6 +21,7 @@ const Blog = () => {
 
   return (
     <Layout>
+      <HeadTag title="Blog" />
       <h1>Blog</h1>
       <p>Posts will show up here</p>
       <ol className={blogStyles.posts}>

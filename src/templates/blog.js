@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { BLOCKS } from "@contentful/rich-text-types"
+import Head from "../components/head"
 
 //This was used to query data from local markdown files to be rendered below
 ///////////////////////////////
@@ -40,7 +41,7 @@ export const query = graphql`
   }
 `
 
-const options = {
+const bodyPic = {
   renderNode: {
     [BLOCKS.EMBEDDED_ASSET]: node => {
       return <img src={node.data.target.fixed.src} alt="bandage"></img>
@@ -51,9 +52,10 @@ const options = {
 const Blog = props => {
   return (
     <Layout>
+      <Head title={props.data.contentfulBlogPost.title} />
       <h1>{props.data.contentfulBlogPost.title}</h1>
       <p> {props.data.contentfulBlogPost.publishedDate}</p>
-      {renderRichText(props.data.contentfulBlogPost.body, options)}
+      {renderRichText(props.data.contentfulBlogPost.body, bodyPic)}
     </Layout>
   )
 }
