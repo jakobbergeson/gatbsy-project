@@ -1,4 +1,4 @@
-This project used the gatsby starter hello-world as a starting point which can be found at https://github.com/gatsbyjs/gatsby-starter-hello-world
+This project uses the gatsby starter `hello-world` as a starting point which can be found at https://github.com/gatsbyjs/gatsby-starter-hello-world
 
 1. Use the Gatsby CLI to create a project on your local machine
     ```shell
